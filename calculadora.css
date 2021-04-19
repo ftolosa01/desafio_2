@@ -1,0 +1,102 @@
+#body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.container{
+    width: 400px;
+    height: 400px;   
+    background-color: black; 
+    border-radius: 24px;
+}
+#numeros{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.item-1{
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    height: 150px;
+}
+.item-2{
+    background-color: rgb(26, 36, 44);
+    grid-column: 1/6;
+    grid-row: 3/7 ;
+    color: white;
+    border-radius: 24px;
+}
+#boton{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#boton1{
+
+    display: grid;
+    grid-row: 3/5;
+    grid-column: 5;    
+    border-radius: 8rem;
+    background-color: gray;
+    height: 135px;
+    width: 50px;
+    margin-left: 19%;
+}
+#boton2{
+    border-radius: 8rem;
+    grid-gap: 24px;
+    margin: 15%;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#boton3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#imagen{
+    border-radius: 8rem;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-items: self-start;
+    align-items: center;
+    margin: -15%;
+}
+button{
+    display: block;
+    border-style: none;
+    background-color: #808080;
+    border-radius: 8rem;
+    grid-gap: 24px;
+    max-height: 60px;
+    height: 50px;
+    width: 50px;    
+}
+#pantalla1{
+ color: lightblue;   
+}
+#pantalla2{
+    color: lightblue;   
+}
+#pantalla3{
+    color: lightblue;   
+}
+#igual{
+    background: lightblue;
+    border-radius: 8rem;
+    grid-gap: 24px;
+    max-height: 160px;
+    height: 135px;
+    width: 50px;
+}
+   
+   
