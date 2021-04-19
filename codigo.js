@@ -157,7 +157,7 @@ function resolver(){
         pantalla2.innerHTML = "/";
         pantalla3.innerHTML = res;
           }else
-          if(numerouno == 0 | numerodos == 0){
+          if(res == 0 | numerodos == 0){
                 res = "Error division por 0";
           }else
         res = res / parseFloat(numerodos);
