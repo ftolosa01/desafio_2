@@ -65,6 +65,7 @@ var borrar = document.getElementById("imagen");
     var numerouno;
     var numerodos;
     var operacion;
+    var res = 0;
 
 suma.onclick = function(e){
     numerouno = pantalla1.textContent;
@@ -98,6 +99,11 @@ dividir.onclick = function(e){
     operacion = "/";
     limpiar();
 }
+
+borrar.onclick = function(e) {
+    pantalla1.split(pantalla1.length, 1);  
+  }
+
 function limpiar(){
     pantalla1.textContent = "";
 }
@@ -108,7 +114,6 @@ igual.onclick = function(e){
 }
 
 function resolver(){
-    var res = 0;
     switch(operacion){
       case "+":
         res = parseFloat(numerouno) + parseFloat(numerodos);
@@ -134,14 +139,15 @@ function resolver(){
         break;
 
       case "-1": 
+      if(res == 0 ){
         res = parseFloat(numerouno) * parseFloat(-1);
+      }else
+        res = res * parseFloat(-1);
         break;
     }
     pantalla3.innerHTML = res;
-    console.log("resultado" + res);
     pantalla1.innerHTML = "";
     pantalla2.innerHTML = ""; 
-        
 }
 
 function resetear(){
@@ -151,4 +157,5 @@ function resetear(){
     numerouno ;
     numerodos ;
     operacion = "";
+    res = 0;
 }
