@@ -101,8 +101,10 @@ dividir.onclick = function(e){
 }
 
 borrar.onclick = function(e) {
-    pantalla1.split(pantalla1.length, 1);  
-  }
+    numerouno = pantalla1.split(pantalla1.length);  
+    operacion = "borrar"
+    pantalla1.innerHTML = numerouno;
+}
 
 function limpiar(){
     pantalla1.textContent = "";
@@ -110,7 +112,6 @@ function limpiar(){
 igual.onclick = function(e){
     numerodos = pantalla1.textContent;
     resolver();
-    console.log("numero 2 " + numerodos);
 }
 
 function resolver(){
@@ -133,6 +134,9 @@ function resolver(){
         break;
   
       case "/":
+          if(numerouno == 0 | numerodos == 0){
+                res = "Error division por 0";
+          }else
         res = parseFloat(numerouno) / parseFloat(numerodos);
         pantalla2.innerHTML = "/";
         pantalla3.innerHTML = res;
